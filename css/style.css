@@ -1,0 +1,1257 @@
+/*Definition de la police et d'une marge de corps de texte*/
+@font-face {                                                          
+font-family: 'ralewayregular';
+src: url('../police/raleway-regular-webfont.eot');
+src: url('../police/raleway-regular-webfont.eot') format('embedded-opentype'),
+url('../police/raleway-regular-webfont.woff2') format('woff2'),
+url('../police/raleway-regular-webfont.woff') format('woff'),
+url('../police/raleway-regular-webfont.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+                                                        
+        
+/*On rajoute une police en gras, en cas de non compatibilité nous rajouterons une police classique en font-weight:bold*/
+@font-face {
+font-family: 'ralewaybold';
+src: url('../police/raleway-bold-webfont.eot');
+src: url('../police/raleway-bold-webfont.eot') format('embedded-opentype'),
+url('../police/raleway-bold-webfont.woff2') format('woff2'),
+url('../police/raleway-bold-webfont.woff') format('woff'),
+url('../police/raleway-bold-webfont.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+   
+/* Définition de la propriété box-sizing*/
+html                                                    
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/*Définition de la police et d'une marge pour l'ensemble de la page*/
+body                                                    
+{
+    font-family: 'ralewayregular', verdana, arial, helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+main 
+{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h1
+{
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+}
+
+h3 {font-size: 18px}
+
+h1+p{margin-top: 7px; margin-bottom: 20px;}                                  
+article h1{margin-bottom: 7px;}
+
+/*Affichage du header*/
+header {display: flex; margin-bottom: 30px;}           
+
+
+
+.logo
+{
+    width: 100px;
+    margin-left: 60px; 
+    margin-top: 30px;;
+}
+
+/* Affichage des mots de l'en_tête */
+#hbt,#act                                                   
+{
+    text-decoration: none;
+    color: black; 
+    padding-top: 30px; 
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*Animation de l'en_tete*/
+#hbt:hover,#act:hover                                       
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    font-weight: bold;
+}
+
+/*Position de l'en_tête*/
+#en_tete                                                
+{
+    position: absolute;
+    right: 3%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/*Affichage du formulaire*/                                                        
+/*Logo du formulaire*/
+.fa-location-dot                                        
+{
+    color: black; 
+    background: #F2F2F2; 
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/*Affichage barre de recherche*/
+input
+{
+    font-size: 18px; 
+    font-family: 'ralewaybold',verdana, arial, helvetica, sans-serif;
+    font-weight: bold; 
+    border: solid 1px rgb(94, 91, 91, 0.1);
+    border-left: 0px;
+    height: 45.5px; 
+    width: 220px;
+    padding-left: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/*Affichage de "Rechercher"*/                                                        
+#rechercher
+{
+    font-size: 18px;
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+    border-radius: 0px 15px 15px 0px;
+    background: #0065FC;
+    height: 51px;
+    width: 140px;  
+}
+
+/*Logo à ne pas afficher sauf en version mobile*/
+#logo_recherche{display: none}                          
+
+/* Affichage section filtre*/                                                        
+#ensemble_filtre
+{
+    display: flex; 
+    margin-top: 45px;
+    margin-left: 10px;
+}
+
+
+#filtre
+{
+    width: 1000px;
+    max-width: 70%;
+    display: flex;
+    justify-content: flex-start;                        
+    flex-wrap: wrap;
+}
+
+.fltr
+{
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-size: 19px;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+/*Affichage des cases filtres*/                                                        
+.eco,.fam,.rom,.anim
+{
+    font-size: 18px;
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(94, 91, 91, 0.3);
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+    bottom: 28px;
+    align-items: center;
+    padding-right: 20px; 
+    margin-right: 30px;  
+    height: 45px;
+} 
+
+/*Animation des filtres*/
+.eco:hover,.fam:hover,.rom:hover,.anim:hover            
+{
+    color: #0065FC;
+    border: 1px solid #0065FC;
+    box-shadow: 1px 1px 5px black;
+}
+
+/*Affichage des icones*/
+.fa-money-bill-wave,.fa-child-reaching,.fa-heart,.fa-dog
+{
+    background: #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: -6px;
+    margin-right: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.fa-child-reaching{font-size: 21px;}
+
+/*Affichage du logo*/
+  .fa-circle-info
+{
+    background: #0065FC;
+    color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    position: relative;
+    bottom: -12px;
+    height: 30px;
+}     
+
+/* Affichage information hébergement*/
+.information_hb
+{
+    display: flex; 
+    position: relative; 
+    top: -25px;
+}
+
+/*Affichage de l'onglet Hébergement*/
+.hebergement
+{
+    background: #F2F2F2;
+    border-radius: 25px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-right: 40px;
+}
+
+#hb1-2,#hb2-2
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+                                            
+/*Disposition des images hebergement*/
+.img_la_cannebiere, .img_hotel_port, .img_hotel_les_mouettes, .img_hotel_de_la_mer, .img_auberge_le_panier, .img_hotel_chez_amina
+{
+    width: 1000px;           /*Permet aux cartes de s'étendre en grande résolution*/                               
+    max-width: 100%;
+    height: 135px;
+    border-radius: 25px 25px 0px 0px; 
+    -o-object-fit: cover; 
+       object-fit: cover;  
+}
+
+ /*Affichage des hébergements à Marseille*/
+.la_cannebiere, .hotel_du_port, .hotel_les_mouettes, .hotel_de_la_mer, .auberge_le_panier, .hotel_chez_amina
+{
+    line-height: 18px;
+    background: white;
+    box-shadow: 0px 5px 10px rgb(131, 129, 129, 0.3);
+    border-radius: 25px;
+    padding: 5px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;      /*Nous indiquons cette position pour placer les étoiles par la suite*/                           
+}
+
+/*Animation des hébergements*/
+.la_cannebiere:hover, .hotel_du_port:hover, .hotel_les_mouettes:hover, .hotel_de_la_mer:hover, .auberge_le_panier:hover, .hotel_chez_amina:hover
+{
+    box-shadow: 1px 1px 5px black
+}
+
+.hebergement h3:hover{color: #0065FC;}
+
+/*Texte sous toutes les images, évitons de rajouter une balise supplémentaire */
+
+h3,.prix 
+{                                               
+    color: black;
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;  
+}
+
+.afficher-plus
+{
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.afficher-plus:hover
+{
+    color: #0065FC;
+}
+
+#hb1-2 h3,#hb2-2 h3
+{
+    margin-top: 7px;
+    margin-bottom: 3px;
+    line-height: 22px;
+}
+
+#hb1-2 p,#hb2-2 p
+{
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+
+.texte_sous_img {margin-left: 15px;}                                               
+
+/*Apparence et disposition des étoiles sur toute la page*/                                                        
+.star1,.star2,.star3,.star4, .star5 
+{
+    color: #0065FC;
+    font-size: 13px;
+}
+
+.star_grey {opacity: 0.3; font-size: 13px;}
+
+/*Grâce à la balise nous prennons toutes les étoiles que nous plaçons en position absolute pour les placer plus simplement*/
+.stars                                                  
+{
+   position: absolute; 
+   bottom: 5px; 
+}
+
+/*Apparence des liens de l'hebergement + Populaire + Activités*/                                                        
+a[href="#"]
+{
+    text-decoration: none;
+    -webkit-text-decoration-line:none;
+    text-decoration-line:none;
+     color: black;
+}
+
+/*On réduit la police dans les hébergements et populaires*/
+.hebergement p{font-size: 15px;}                        
+
+
+
+/*Balise aside */                                                      
+/*Logo dans aside*/                                                      
+#titre_aside                                     
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.fa-arrow-trend-up
+{
+    font-size: 16px;
+    border-left: 3px solid black;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    border-bottom: 3px solid black;
+}
+
+/*Position de la balise aside*/                                                        
+.hb_pop{display: flex; justify-content: space-between;}
+
+/*Affichage de la balise aside*/
+.aside                                                  
+{
+    max-width: 28%;
+    background: #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px; 
+}
+
+/*Disposition du contenu dans la nav, donner une hauteur permet aux bloc de se placer sur toute la hauteur de la nav*/
+.conteneur_aside                                        
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 86%;
+}
+    
+/*Affichage du texte à côté des images + taille des images*/                                                        
+.img_hotel_soleil, .img_au_coeur_eau, .img_tout_bleu_blanc
+{
+    width: 120px;
+    height: 154px;
+    float: left;
+    margin: 5px;
+    padding-right: 10px;  
+    border-radius: 25px 0px 0px 25px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+/*Affichage du cadre autours des images*/
+.hotel_le_soleil, .au_coeur_eau, .tout_bleu_blanc       
+{
+    width: 325px;
+    max-width: 100%;
+    background: white; 
+    box-shadow: 0px 5px 10px rgb(131, 129, 129, 0.3);
+    border-radius: 25px 25px 25px 25px;
+    position: relative;
+}
+
+/*Disposition du texte dans aside/ On réduit le margin pour baisser l'écart*/
+.conteneur_aside p
+{
+    margin-top: 8px;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+.conteneur_aside h3
+{
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+
+/*Position des étoiles, nous réalisons le même procédé que pour les éotiles de la partie hebergement*/                                                           
+.etoile_aside
+{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 140px;
+}
+
+.hotel_le_soleil:hover, .au_coeur_eau:hover, .tout_bleu_blanc:hover {box-shadow: 1px 1px 5px black}
+
+/*Animation des logements populaires*/                                                         
+.aside h3:hover{color: #0065FC;} 
+
+                                                        
+/*Affichage activités à Marseille*/
+#marge_act{margin-top: 80px;}
+
+.activité h3 
+{
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold; 
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+/*Disposition des images*/
+.activité
+{
+    display: flex;
+    justify-content: space-between; 
+}
+
+/*Affichage des images avec leur background*/
+.img_vieux_port, .img_calanque
+{
+    height: 340px;
+    width: 300px;                                          
+    border-radius: 25px 25px 0 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+}
+
+
+.img_fort_de_pomegues 
+{
+    height: 150px;
+    width: 300px;  
+    border-radius: 25px 25px 0 0; 
+    -o-object-fit: cover; 
+       object-fit: cover; 
+    max-width: 100%;   
+}
+
+/*On ne met pas les deux images du bloc ensemble comme elles n'ont pas la même taille*/
+.img_iles_du_fioul
+{
+    height: 80px;
+    width: 300px;  
+    border-radius: 25px 25px 0 0; 
+    -o-object-fit: cover; 
+       object-fit: cover;
+    max-width: 100%;
+}
+
+.img_la_garde,.img_longchamp
+{
+    height: 120px;
+    width: 300px;  
+    max-width: 100%;
+    border-radius: 25px 25px 0px 0px; 
+    -o-object-fit: cover; 
+       object-fit: cover;
+}
+                                                                                                                              
+/*Marge des images "activités"*/                                                       
+.fort_de_pomegues
+{
+    padding-bottom: 4px; 
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.iles_du_fioul
+{
+    padding-bottom: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.la_garde
+{
+    padding-bottom: 4px;
+    margin-bottom: 40px; 
+    margin-left: 20px;   
+}
+
+.parc_longchamp
+{
+    padding-bottom: 4px;
+    margin-left: 20px;
+}
+
+.vieux_port h3, .calanque h3 {padding-bottom: 20px;}
+
+
+/*Affichage du background des images "activités*/
+.vieux_port,.fort_de_pomegues,.iles_du_fioul,.calanque,.fort_de_pomegues,.parc_longchamp,.la_garde
+{
+    box-shadow: 0px 5px 10px rgb(131, 129, 129, 0.3);
+    border-radius: 25px 25px 25px 25px;   
+}
+
+                                                            
+/*Animation des activités*/
+.vieux_port:hover,.fort_de_pomegues:hover,.iles_du_fioul:hover,.calanque:hover,.parc_longchamp:hover,.la_garde:hover
+{
+     box-shadow: 1px 1px 5px black;
+}                                                            
+ 
+ #marge_act h3:hover{color: #0065FC;}
+
+
+ 
+/*Affichage bas de page*/
+.foother li {list-style-type : none;}   /*Pour enlever les puces sur les titres*/                        
+
+                            
+.foother                                                  
+{
+    background: #F2F2F2;
+    margin-top: 60px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.foother ul
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0%; 
+    white-space: nowrap;
+}
+
+.foother h3
+{
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}      
+
+.a_propos {margin-right: 150px;}
+
+/*On décale le texte du foother vers la gauche*/
+#assistance 
+{
+    margin-right: 300px;
+}                        
+
+/*Nous permet de ne pas avoir le texte qui se décale en hover tout en conservant l'affichage demandé*/
+li p {width: 0px;}                 
+
+/*Animation du foother*/                                                            
+.foother a:hover
+{
+    color: #0065FC;
+    font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/*Lors d'une basse résolution en version desktop, les cartes devenaient trop petites, il a fallut placer les sous-balises en colonne*/
+@media (max-width: 1400px)
+{
+    #hb1-2,#hb2-2
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .card {display: flex;}
+    
+
+    .img_hotel_soleil, .img_au_coeur_eau, .img_tout_bleu_blanc
+    {
+        height: 200px;
+    }
+
+}
+
+/*Afin que le texte ne soit pas coupé on bloque cette balise à une taille fixe*/
+@media (max-width: 1101px)                          
+{
+    .calanque
+    {
+        width: 240px;
+    }
+}
+
+/*Media Queries pour tablette*/
+@media (max-width:992px) {
+
+/*On enlève la marge du main et on en rajoute sur les éléments ci-dessous*/
+    main                                                       
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #barre-recherche, #ensemble_filtre, .information_hb 
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+/*On augmente la taille du logo*/
+    .logo                                                   
+    {
+        width: 135px;
+        margin-left: 50px;  
+    }
+    
+    #hbt,#act{font-size: 18px;}
+
+/*Affichage filtre*/
+    #ensemble_filtre                                        
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    #filtre
+    { 
+        max-width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .fltr 
+    {
+        font-family: 'ralewaybold', verdana, arial, helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 30px;
+        padding-bottom: 30px;
+    }
+
+    .card
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*flex-wrap permettra aux cartes de rester sur la même ligne tout en étant responsive*/
+    #hb1-2,#hb2-2
+    {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-right: 20px;
+    }
+
+/*Affichage des hébergements*/
+    .hebergement
+    {                                                   
+        background: #F2F2F2;
+        border-radius: 0px;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 2px;
+        margin-right: 0px;
+    }
+
+    .img_hebergement
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .img_la_cannebiere, .img_hotel_port, .img_hotel_les_mouettes, .img_hotel_de_la_mer, .img_auberge_le_panier, .img_hotel_chez_amina
+    {
+        width: 270px;
+        max-width: 100%;
+        height: 100px;
+        border-radius: 30px 30px 0px 0px; 
+    }
+
+    .afficher-plus {margin-bottom: 20px;}
+
+    .la_cannebiere, .hotel_du_port, .hotel_les_mouettes, .hotel_de_la_mer, .auberge_le_panier, .hotel_chez_amina 
+    {
+        margin-top: 10px;
+        margin-right: 16px;
+    }
+
+/*On place la balise populaire  en haut des hébergements en position horizontale*/
+    .aside                                          
+    {
+        background: #F2F2F2;
+        border-radius: 0px;
+        padding-left: 30px;
+        margin-bottom: 40px;
+        max-width: 100%;
+        height: 380px;
+        margin-right: 0px;
+        padding-right: 20px;
+    }
+    
+    .conteneur_aside                                        
+    {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-bottom: 90px; 
+       margin-right: -0px;
+       width: 992px;
+       max-width: 100%;
+    }
+
+    .hb_pop 
+    {
+        display: flex; 
+        flex-direction: column-reverse;
+    }
+
+/*On modifie la taille des images pour qu'elles rentrent dans la balise*/
+    .img_hotel_soleil, .img_au_coeur_eau, .img_tout_bleu_blanc          
+    {
+        width: 260px;
+        max-width: 100%;
+        height: 130px;
+        float: none;
+        border-radius: 25px 25px 0px 0px;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+                                                            
+    .hotel_le_soleil, .au_coeur_eau, .tout_bleu_blanc       
+    {
+        background: white; 
+        border-radius: 25px 25px 25px 25px;
+        margin: 15px; 
+        padding-bottom: 2px;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 5px;
+        height: 250px;
+        width: 260px;
+        max-width: 100%;
+        padding-right: 10px;
+        
+    }
+
+    .fa-arrow-trend-up                                      
+    {
+        position: absolute;
+        right: 50px;
+    }
+
+    .etoile_aside
+    {
+        position: absolute;
+        left: -125px;
+    }
+
+/*Disposition du texte sous les images de l'aside*/
+    .hotel_le_soleil h3, .au_coeur_eau h3, .tout_bleu_blanc h3 
+    {
+        padding-left: 15px;
+        margin-top: 5px;
+    }
+    .hotel_le_soleil p, .au_coeur_eau p, .tout_bleu_blanc p 
+    {
+        padding-left: 15px;
+        margin-top: 5px;
+    }
+    
+    .img_vieux_port, .img_calanque
+    {
+        height: 350px;
+        width: 335px;                                           
+        border-radius: 25px 25px 0 0;
+    }
+    .vieux_port,.calanque
+    {
+        margin-bottom: 65px;
+        margin-right: 45px;
+        width: 335px;
+    }
+
+    .img_iles_du_fioul{height: 123px;}
+
+    .iles_du_fioul{margin-top: 15px;}
+
+    .fort_de_pomegues{margin-bottom: 20px;}
+
+    .la_garde {margin-bottom: 50px;}
+
+/*Pour un plus beau rendu on affiche les images au centre*/
+    .activité                                           
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #marge_act h1 
+    {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+/*On réhausse la partie activité sur la page*/
+    #marge_act h1, .activité                           
+    {
+        position: relative;
+        top: -30px;
+    }
+
+/*Affichage du foother*/
+    #assistance{margin-right: 70px;} 
+
+/*On réduit la marge enbtre le foother et les activités*/
+    .foother{margin-top: 0px;}                          
+
+    #assistance {padding-right: 20px;}
+}
+
+                                                       
+/*Media Queries pour Téléphone*/
+@media (max-width:768px) {
+
+                                                        
+/*Redéfinition de la marge body et de la taille des polices*/  
+    p
+    {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    h1
+    {
+        color: black;
+        font-size: 23px;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    h3 {font-size: 17px; margin-left: 20px;}
+
+/*Disposition du header en column*/
+    header 
+    {
+        display: flex;
+        margin-bottom: 0px;
+        align-items: center;
+        flex-direction: column;
+        height: 155px;              /*On rajoute une hauteur au header pour que lors de l'animation du soulignement le texte en dessous ne change pas de place*/            
+    }
+
+    #barre-recherche, #ensemble_filtre, .information_hb 
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+/*Affichage du logo*/
+    .logo                                               
+    {
+        width: 115px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/*Disposition de l'en-tete*/
+    #en_tete                                            
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+/*On augmente la taille du bloc pour que le soulignement prenne la moitiée de la page*/
+    #hbt,#act
+    {
+        padding-top: 0px;
+        font-size: 18px;
+        justify-content: center;
+        width: 40%;
+        margin-left: 0px;
+        padding-left: 20px;
+    }                              
+
+/*Animation de l'en_tete*/
+    #hbt:hover,#act:hover                                      
+    {
+        color: #0065FC;
+        border-top: 0px solid #0065FC;
+        border-bottom: 2px solid #0065FC;
+        font-weight: bold;
+        padding-bottom: 15px;
+    }
+    
+/*Marge autours du formulaire*/
+        form{margin-top: 30px; margin-bottom: 30px;}            
+
+/*Logo du formulaire*/
+        .fa-location-dot                                        
+        {
+        color: black; 
+        background: #F2F2F2;             /*On augmente la taille du logo et du background*/
+        font-size: 18px;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        align-items: center;
+        border-radius: 20px 0px 0px 20px;
+        margin-right: 10px;
+        position: relative;
+        top: -2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+
+/*Affichage barre de recherche*/
+        input
+        {                                                   /*On augmente la taille de police et change les marge*/
+        font-size: 19px;  
+        border: solid 1px rgb(94, 91, 91, 0.1);
+        border-left: 0;
+        border-right: 0; 
+        height: 50px;
+        margin-right: 12px; 
+        margin-left: -20px;
+        padding-left: 10px;
+        max-width: 55%;
+        }
+
+/*Affichage de "Rechercher"*/
+        #rechercher {display: none;}                                       /*On enlève la case "rechercher" pour la transformer par un logo de loupe*/
+    
+        #logo_recherche
+        {
+        display: inline-flex;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 0px;
+        border-radius: 20px 20px 20px 20px;
+        background: #0065FC;
+        margin-left: -25px;
+        flex-wrap: nowrap;
+        }
+
+/*Affichage du titre "filtre" / On augmente la taille de police*/
+        .fltr                                               
+        {
+        font-size: 19px; 
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+
+                                                           
+/*Affichage des cases filtres*/                                                        
+        .eco,.fam,.rom,.anim
+        {
+        font-size: 17px;                                  
+        border: 2px solid rgb(94, 91, 91, 0.2);
+        border-radius: 40px;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 0px; 
+        margin-top: 10px; 
+        height: 45px;;
+        }
+
+/*Disposition des filtres*/
+        #filtre                                             
+        {
+        display: flex;
+        justify-content: flex-start;                  /*On change la disposition par un flex-start pour une meilleure visibilité*/
+        flex-wrap: wrap;
+        height: auto;
+        }
+
+        .information_hb {margin-top: 10px;}
+
+        .fa-circle-info {margin-left: 20px;}
+
+/*la balise populaire prend maintenant toute la largeur de la page*/
+        .aside                                          
+        {
+        background: #F2F2F2;
+        height: auto;                             
+        padding-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        position: relative;
+        }
+
+ /*Les éléments sont placés en colonne*/
+        .conteneur_aside                               
+        {
+       flex-direction: column;
+       margin-bottom: 30px; 
+       align-items: center;
+       padding-top: 80px;
+       }
+
+        .img_hotel_soleil, .img_au_coeur_eau, .img_tout_bleu_blanc
+        {
+        height: 160px;
+        width: 650px;
+        max-width: 45%;
+        float: left;
+        margin: 5px;  
+        margin-right: 10px; 
+        border-radius: 25px 0px 0px 25px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        }
+
+        .hotel_le_soleil, .au_coeur_eau, .tout_bleu_blanc       
+        {
+        background: white; 
+        border-radius: 25px 25px 25px 25px;
+        width: 700px;
+        height: 170px;
+        position: relative;
+        margin-bottom: 10px;
+        margin-right: 0px;
+        
+        }
+
+        .aside h1
+        {
+        margin-bottom: 25px;
+        margin-left: 0px;
+        white-space: nowrap;
+        }
+
+        #titre_aside 
+        {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 91.5%;
+        }
+
+        .fa-arrow-trend-up    
+        {
+        position: absolute;
+        right: 15px;
+        font-size: 17px;    
+        }
+
+        .hotel_le_soleil h3, .au_coeur_eau h3, .tout_bleu_blanc h3      /*Nous rajoutons la marge des titres*/
+        {
+        padding-top: 15px;
+        padding-left: 0px;
+        }
+
+        .hotel_le_soleil p, .au_coeur_eau p, .tout_bleu_blanc p
+        {
+        margin-left: 0px;
+        padding-left: 0px;
+        }
+
+        .etoile_aside
+        {
+        margin-left: 0px;
+        left: 49.5%;
+        bottom: 10px;
+        position: absolute;
+        }  
+    
+                                                                    /*Affichage des hébergements*/
+
+        .hebergement
+        {
+        max-width: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0px;
+        }     
+
+        .hebergement h1
+        {
+        padding-left: 5px;
+        margin-bottom: 15px;
+        margin-right: 0px;                          /*Permet de conserver la taille de l'écriture sans saut a la ligne en 30px de resolution*/
+        }
+
+        .la_cannebiere p, .hotel_du_port p, .hotel_les_mouettes p, .hotel_de_la_mer p, .auberge_le_panier p, .hotel_chez_amina p
+        {
+        margin-left: 0px;
+        }
+
+        #hb1-2, #hb2-2
+        {
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 30px;
+        padding-right: 0px;
+        }
+        
+        .texte_sous_img h3 {margin-left: 0px;}
+
+        .la_cannebiere, .hotel_du_port, .hotel_les_mouettes, .hotel_de_la_mer, .auberge_le_panier, .hotel_chez_amina
+        {
+        width: 700px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0px;
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: 0px 5px 10px rgb(131 129 129 / 30%);
+        }
+
+        .img_la_cannebiere, .img_hotel_port, .img_hotel_les_mouettes, .img_hotel_de_la_mer, .img_auberge_le_panier, .img_hotel_chez_amina
+        {
+        width: 700px;
+        height: 125px;
+        border-radius: 15px 15px 0px 0px;                       /*On réduit l'angle du border-radius*/
+        }
+
+        .afficher-plus
+        {
+            padding-left: 30px;
+            font-size: 19px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+                                                                /*Affichage Activités*/
+        #marge_act 
+        {  
+        margin: 70px 5px 0px 5px;                         
+        }
+
+        #marge_act h1 
+        {
+            margin-bottom: 30px;
+            justify-content: flex-start;
+        }
+
+        .activité
+        {
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .img_vieux_port, .img_calanque, .img_fort_de_pomegues, .img_iles_du_fioul, .img_la_garde, .img_longchamp, .img_la_garde, .img_longchamp
+        {
+        width: 800px;
+        max-width: 100%;
+        height: 125px; 
+        border-radius: 15px 15px 0px 0px;
+        }
+
+        .vieux_port, .fort_de_pomegues, .iles_du_fioul, .calanque, .fort_de_pomegues, .parc_longchamp, .la_garde
+        {
+        max-width: 100%;
+        width: 800px;
+        border-radius: 15px 15px 15px 15px;
+        margin-bottom: 30px;
+        margin-right: 0px;
+        }
+
+        .photo_par_2 
+        {
+            margin-right: 20px;
+            margin-left: -20px;
+        }
+
+                                                        /*Affichage du foother*/
+        .foother ul 
+        {
+        flex-direction: column;
+        margin-bottom: 0%;
+        padding-left: 10px;
+        }
+
+        .foother li {margin-bottom: 15px;}
+
+        .foother h3
+        {
+        margin-left: 20px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: 18px;
+        }
+
+}
+
+
